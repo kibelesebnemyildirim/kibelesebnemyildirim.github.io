@@ -1,0 +1,123 @@
+/* General Styles */
+body, html {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand h4 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav-link {
+    font-size: 16px;
+    margin: 0 10px;
+    text-transform: uppercase;
+}
+
+/* Landing Page Styles */
+.landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    text-align: left;
+}
+
+.landing .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.landing h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.landing p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Banner Image Styles */
+.container-back img {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* About Page Styles */
+.container {
+    padding: 80px 20px;
+}
+
+.container h1, .container h2 {
+    margin-bottom: 20px;
+}
+
+.container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Media Page Styles */
+.container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.container a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .landing h1 {
+        font-size: 36px;
+    }
+
+    .landing h4 {
+        font-size: 20px;
+    }
+
+    .landing p {
+        font-size: 16px;
+    }
+}
