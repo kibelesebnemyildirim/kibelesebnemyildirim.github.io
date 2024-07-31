@@ -37,7 +37,7 @@ The personal website is designed to present information about myself, my work, a
 | |-- [JavaScript files, if any]
 |-- index.html # Landing page
 |-- about.html # About page
-|-- media.html # Media page
+|-- projects.html # Projects page
 |-- README.md # This file
 
 
@@ -47,13 +47,13 @@ To run the website locally, follow these steps:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/personal-website.git
+   git clone https://github.com/kibelesebnemyildirim/personal-website.git
 
     cd personal-website
     ```
 2. **Open the Files**   
     
-        Open the `index.html`, `about.html`, or `media.html` files in your browser to view the website.
+        Open the `index.html`, `about.html`, or `projects.html` files in your browser to view the website.
         
 
 
