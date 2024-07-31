@@ -1,3 +1,4 @@
+/* General Styles */
 body, html {
     font-family: 'Ubuntu', sans-serif;
     color: #343a40;
@@ -25,7 +26,7 @@ body, html {
     align-items: center;
 }
 .navbar-brand h4 {
-    color: #fff;
+    color: #ffffff;
     margin-right: 10px;
 }
 .navbar-brand img {
@@ -46,6 +47,7 @@ body, html {
     margin: 0 10px;
 }
 .navbar-nav .nav-link {
+    background-color: #007bff;
     color: #fff !important;
     font-size: 16px;
     text-transform: uppercase;
@@ -54,8 +56,9 @@ body, html {
     padding: 10px 15px;
     border-radius: 5px;
 }
+
 .navbar-nav .nav-link:hover {
-    color: #ff5722;
+    color: #ffffff;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -78,44 +81,75 @@ body, html {
 .section {
     padding: 60px 15px;
     position: relative;
-}
-.section.bg-light {
-    background-color: #f8f9fa;
-}
-.section h1, .section h2, .section h3 {
-    font-family: 'Sansita', sans-serif;
-}
-.section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    background-color: #fff; /* Background color for contrast */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
 }
 
+/* About Section Styling */
 #about {
     display: flex;
-    padding: 0;
-    max-width: 1200px; /* Max width for the section */
-    margin: 0 auto; /* Center the section */
+    flex-direction: row; /* Align text and image side by side */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+#about .container {
+    display: flex;
+    flex-direction: row; /* Align text and image side by side */
+    width: 100%; /* Full width */
+}
+
+#about .row {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    width: 100%;
+}
+
+#about .about-text, #about .about-image {
+    flex: 1; /* Each takes up equal space */
+    padding: 15px; /* Space around content */
 }
 
 #about .about-text {
-    padding-right: 20px; /* Space between text and image */
-    text-align: left;
-    align-items: left; /* Center image vertically */
+    text-align: left; /* Align text to the left */
 }
 
 #about .about-image {
-    flex: 0 0 150px; /* Fixed width for the image container */
     display: flex;
-    align-items: right; /* Center image vertically */
-    justify-content: right; /* Center image horizontally */
+    justify-content: flex-end; /* Align image to the right */
+    align-items: center; /* Center image vertically */
 }
 
 #about .about-image img {
-    max-width: 100%; /* Ensure image fits within the container */
-    height: 150px; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure image covers the container */
+    max-width: 40%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 8px;
+    padding-right: 110px;
+}
+
+/* Bubble animation */
+.bubble {
+    padding: 15px 
+    position: absolute;
+    background: rgba(173, 216, 230, 0.6);
+    border-radius: 50%;
+    animation: rise 10s infinite;
+}
+@keyframes rise {
+    0% {
+        bottom: -10%;
+        transform: scale(0.5);
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        bottom: 110%;
+        transform: scale(1.5);
+        opacity: 0;
+    }
 }
 
 /* Styled "See More" Link */
@@ -175,4 +209,121 @@ body, html {
 #unipath .image-gallery img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Connect Section Styling */
+#connect {
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 60px 15px;
+    text-align: center; 
+}
+
+#connect h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#connect p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: left; 
+    gap: 20px; 
+}
+
+.social-buttons a {
+    display: block; 
+}
+
+.social-buttons img {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.social-buttons img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+/* General Styles for Consistency */
+#works h2 {
+    font-size: 2rem; 
+    margin-top: 20px; 
+    text-align: left; /* Align the section headings to the left */
+}
+
+#works h3 {
+    font-size: 1.5rem; 
+    margin-top: 20px; 
+    text-align: left; /* Align subheadings to the left */
+}
+
+/* Style for list items */
+#works ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+#works li {
+    margin-bottom: 20px; 
+    text-align: left; /* Align list items to the left */
+}
+
+/* Container and row adjustments */
+#works .container {
+    max-width: 1200px; /* Set a max-width to control container size */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+#works .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space out columns to ensure alignment */
+}
+
+/* Specific styles for the Presentations and Publications sections */
+#works .col-md-6 {
+    margin-bottom: 30px; 
+    width: 100%; /* Ensure columns take full width */
+}
+
+/* Align Presentations and Publications sections */
+#works .presentations,
+#works .publications {
+    padding: 0 15px; /* Add padding for spacing */
+}
+
+#works .presentations ul,
+#works .publications ul {
+    margin: 0; /* Remove margin from lists */
+    padding: 0; /* Remove padding from lists */
+}
+
+/* Adjusting the image size and aesthetics */
+.smaller-img {
+    max-width: 40%; /* Set to 40% for better aesthetics */
+    height: auto; /* Adjust height to auto to maintain aspect ratio */
+    display: block;
+    margin: 10px auto; /* Center the image with vertical spacing */
+    border: 2px solid #ddd; /* Light border around the image */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect on hover */
+}
+
+.smaller-img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+/* Ensure proper alignment for the Publications section */
+#works .publications {
+    padding-left: 15px; /* Align left padding with Presentations */
 }
