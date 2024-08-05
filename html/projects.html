@@ -1,29 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Kibele Sebnem Yildirim</title>
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Sansita&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js"></script>
 
+    <style>
+      .smaller-img {
+            width: 100%;
+            height: 600px;
+            display: none; /* Initially hidden */
+        }
+        .show {
+            display: block;
+        }
+        .iframe-container {
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #pdf-viewer {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
 <body>
-    <!-- NAV BAR -->
-    <nav class="navbar navbar-dark navbar-expand-lg">
+    <nav class="navbar navbar-dark navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <h4>Kibele Sebnem Yildirim</h4>
+                <div class="d-flex align-items-center">
+                    <h1 class="mb-0">Kibele Sebnem Yildirim</h1>
+                </div>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
@@ -33,7 +57,6 @@
         </div>
     </nav>
 
-    <!-- PROJECTS SECTION -->
     <div id="works" class="section">
         <div class="container">
             <h1>Projects</h1>
@@ -44,20 +67,22 @@
                         <li>
                             "Optimizing Home Care Worker Assignments: A Case Study in British Columbia" - INFORMS Annual Meeting, 2024
                             <br>
-                            <img src="images/home-care-worker-assignments.jpg" alt="Optimizing Home Care Worker Assignments" class="smaller-img">
                         </li>
                         <li>
                             "Improving Access to Community Pharmacies in Rural Areas: A Drone Delivery" - POMS Istanbul 2024, ICIMP 2024
                             <br>
                             <video width="320" height="240" controls>
                                 <source src="/images/pomspresent2.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
                             </video>
-                        </li> 
+                        </li>
                         <li>
-                            "An Augmented Reality (AR) Application to Solve Difficult Intravenous Access" - Multidisciplinary Undergraduate Research Conference, 2023
+                            "An Augmented Reality (AR) Application to Solve Difficult Intravenous Access" - Multidisciplinary Undergraduate Research Conference 2023, Interdisciplinary Student Health Conference 2023
                             <br>
-                            <img src="images/ar-application.jpg" alt="AR Application for IV Access" class="smaller-img">
+                            <a href="https://smp.cms.ok.ubc.ca/wp-content/uploads/sites/93/2023/03/2023-ISHC-Programv2.pdf#page=60" target="_blank" class="btn btn-primary">See More</a>
+                            <img src="/images/murc.JPG" alt="AR Application for IV Access" class="publication-img">
+
+                          
+                            
                         </li>
                     </ul>
                 </div>
@@ -72,43 +97,58 @@
                         <li>
                             "Improving Access to Community Pharmacies in Rural Areas: A Drone Delivery" - POMS Istanbul 2024, ICIMP 2024
                             <br>
-                            <img src="/images/poms.jpg" alt="POMS Publication" class="smaller-img">
+                            <img src="/images/poms.jpg" alt="POMS Publication" class="publication-img">
                         </li>
                         <li>
                             "Optimizing Home Care Worker Assignments: A Case Study in British Columbia" - INFORMS 2024
                             <br>
                             <a href="link-to-publication-3" class="btn btn-primary">Read Publication</a>
                         </li>
+                        <li>
+                            "An Augmented Reality (AR) Application to Solve Difficult Intravenous Access" - Multidisciplinary Undergraduate Research Conference 2023, Interdisciplinary Student Health Conference 2023
+                            <br>
+                            <a href="#" id="viewPdfLink" class="btn btn-primary">Read Publication</a>
+                            <div id="pdfContainer">
+                                <embed src="/MURC x CJUR 2023_abstract.pdf" type="application/pdf" class="smaller-img" alt="AR Application for IV Access">
+                            </div>
+                            
+                            
+                        </li>
                     </ul>
                 </div>
-                
             </div>
         </div>
     </div>
-    
-<!-- CONNECT SECTION -->
-<div id="connect" class="section">
-    <div class="container">
-        <h1>Contact</h1>
-        <p>Feel free to reach out to me at:</p>
+
+    <div id="connect" class="section">
+        <div class="container">
+            <h1>Contact</h1>
+            <p>Feel free to reach out to me at:</p>
             <p>Email: <a href="mailto:sebnemkibeleyildirim@gmail.com">sebnemkibeleyildirim@gmail.com</a></p>
-        <p>Connect me over LinkedIn and GitHub:</p>
-        <div class="social-buttons">
-            <a href="https://www.linkedin.com/in/kibele-sebnem-yildirim-71054917b/" target="_blank">
-                <img src="/images/linkediniconn.png" alt="LinkedIn">
-            </a>
-            <a href="https://github.com/kibelesebnemyildirim" target="_blank">
-                <img src="/images/githubicon.png" alt="GitHub">
-            </a>
+            <p>Connect with me over LinkedIn and GitHub:</p>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/kibele-sebnem-yildirim-71054917b/" target="_blank">
+                    <img src="/images/linkediniconn.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://github.com/kibelesebnemyildirim" target="_blank">
+                    <img src="/images/githubicon.png" alt="GitHub" class="social-icon">
+                </a>
+            </div>
         </div>
     </div>
-</div>
 
-    <!-- jQuery -->
-    <script src="/js/jquery-3.5.1.min.js"></script>
-    <!-- Bootstrap 4.5 JS--> 
-    <script src="/js/bootstrap.min.js"></script>
-    <!-- Popper JS -->
-    <script src="/js/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('viewPdfLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#pdfContainer .smaller-img').classList.toggle('show');
+        });
+        document.getElementById('viewPublicationLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.open('https://smp.cms.ok.ubc.ca/wp-content/uploads/sites/93/2023/03/2023-ISHC-Programv2.pdf#page=60', '_blank');
+        });
+        
+    </script>
 </body>
 </html>
