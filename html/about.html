@@ -7,6 +7,143 @@
     <link href="https://fonts.googleapis.com/css2?family=Sansita&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        /* Core Styling */
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: #f4f8fc;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background: linear-gradient(to right, rgba(0, 86, 179, 0.9), rgba(0, 123, 255, 0.9));
+            padding: 15px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand h1 {
+            font-size: 1.8rem;
+            color: #fff;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffffb3;
+            font-size: 1.1rem;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffdf40;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 60px 0;
+        }
+        h1, h2 {
+            color: #004e99;
+            font-weight: 700;
+        }
+
+        /* About Section */
+        .about-img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.5s, box-shadow 0.5s;
+            border: 4px solid #004e99;
+            box-shadow: 0 6px 12px rgba(0, 78, 153, 0.3);
+        }
+        .about-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 78, 153, 0.5);
+        }
+
+        /* Text and Awards Styling */
+        .about-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #004e99;
+        }
+        .about-text h2 {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            color: #004e99;
+        }
+        .about-text p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .about-text ul {
+            list-style: none;
+            padding: 0;
+        }
+        .about-text ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 20px;
+            color: #555;
+        }
+        .about-text ul li::before {
+            content: '✓';
+            color: #004e99;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* Octopus Image Gallery */
+        .octopus-gallery {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        .octopus-gallery img {
+            width: 90px;
+            height: auto;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .octopus-gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Social Buttons */
+        .social-buttons img {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+        .social-buttons img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 4px 12px rgba(0, 78, 153, 0.5);
+        }
+
+        /* Footer Styling */
+        #connect {
+            padding: 50px 0;
+            background-color: #004e99;
+            color: #fff;
+            text-align: center;
+        }
+        #connect h1 {
+            font-size: 2.2rem;
+            color: #ffdf40;
+        }
+        #connect p {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+        #connect a {
+            color: #ffdf40;
+        }
+        html {
+    scroll-behavior: smooth;
+}
+
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg sticky-top">
@@ -24,7 +161,7 @@
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#connect" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -35,10 +172,10 @@
             <div class="row align-items-center">
                 <div class="col-md-6 about-text">
                     <h1>About Me</h1>
-                    <p>Hi, I'm Kibele Sebnem Yildirim, a forth-year Computer Science and Economics student and an enthusiastic researcher in Operations Management. My journey has been driven by a strong desire to optimize processes and create efficient systems. I also love my student-led initiative, UniPath, which guides underprivileged students to study abroad in Europe, US, and Canada! See more via clicking one of the cute octopuses below!</p>
+                    <p>Hi, I'm Kibele Sebnem Yildirim, a fourth-year Computer Science and Economics student and an enthusiastic researcher in Operations Management. My journey has been driven by a strong desire to optimize processes and create efficient systems. I also love my student-led initiative, UniPath, which guides underprivileged students to study abroad in Europe, the US, and Canada! See more by clicking one of the cute octopuses below!</p>
                     <h2>Education</h2>
                     <ul>
-                        <li><strong>University of British Columbia (UBC)</strong>: Double Major Computer Science and Economics (2021 - Present)</li>
+                        <li><strong>University of British Columbia (UBC)</strong>: Double Major in Computer Science and Economics (2021 - Present)</li>
                     </ul>
                     <h2>Honors & Awards</h2>
                     <ul>
@@ -46,44 +183,63 @@
                         <li>Global Pathfinder Award - UBC, 2023</li>
                         <li>Christian Bürkert Student Research Scholarship - Germany, 2023</li>
                         <li>Deputy Vice-Chancellor Scholarship Recipient - UBC, 2022</li>
-                        <li>Karen McKellin International Leader of Tomorrow Award Recipient - UBC, 2021</li>
+                        <li>Karen McKellin International Leader of Tomorrow Award - UBC, 2021</li>
                     </ul>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="/images/pomsbanner.jpg" alt="Kibele Sebnem Yildirim" class="about-img">
+                    <img src="/images/pomsbanner.jpg" alt="Kibele Sebnem Yildirim" class="about-img" id="aboutImage">
                 </div>
-                <div >
-                  <a href="https://unipathapp.com/" target="_blank">
-                    <img src="/images/ahtapot0.png" alt="UniPath Image 1" class="img-fluid">
-                </a>
-                <a href="https://unipathapp.com/" target="_blank">
-                    <img src="/images/ahtapot.png" alt="UniPath Image 2" class="img-fluid">
-                </a>
+                <div class="octopus-gallery">
+                    <a href="https://unipathapp.com/" target="_blank">
+                        <img src="/images/ahtapot0.png" alt="UniPath Image 1" class="img-fluid">
+                    </a>
+                    <a href="https://unipathapp.com/" target="_blank">
+                        <img src="/images/ahtapot.png" alt="UniPath Image 2" class="img-fluid">
+                    </a>
                 </div>
             </div>
         </div>
-     
-        <div class="bubbles"></div>
     </div>
 
     <div id="connect" class="section">
-      <div class="container">
-          <h1>Contact</h1>
-          <p>Feel free to reach out to me at:</p>
-          <p>Email: <a href="mailto:sebnemkibeleyildirim@gmail.com">sebnemkibeleyildirim@gmail.com</a></p>
-          <p>Connect with me over LinkedIn and GitHub:</p>
-          <div class="social-buttons">
-              <a href="https://www.linkedin.com/in/kibele-sebnem-yildirim-71054917b/" target="_blank">
-                  <img src="/images/linkediniconn.png" alt="LinkedIn" class="social-icon">
-              </a>
-              <a href="https://github.com/kibelesebnemyildirim" target="_blank">
-                  <img src="/images/githubicon.png" alt="GitHub" class="social-icon">
-              </a>
-          </div>
-      </div>
-  </div>
+        <div class="container">
+            <h1>Contact</h1>
+            <p>Feel free to reach out to me at:</p>
+            <p>Email: <a href="mailto:sebnemkibeleyildirim@gmail.com">sebnemkibeleyildirim@gmail.com</a></p>
+            <p>Connect with me on LinkedIn and GitHub:</p>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/kibele-sebnem-yildirim-71054917b/" target="_blank">
+                    <img src="/images/linkediniconn.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://github.com/kibelesebnemyildirim" target="_blank">
+                    <img src="/images/githubicon.png" alt="GitHub" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript to Rotate the About Image -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = [
+                "/images/pomsbanner.jpg",
+                "/images/face.jpg",
+                "/images/poms.jpg",
+                "/images/informs.png"
+            ];
+            let currentIndex = 0;
+
+            function rotateImage() {
+                const aboutImage = document.getElementById("aboutImage");
+                aboutImage.src = images[currentIndex];
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+            // Rotate every 5 seconds (5000 milliseconds)
+            setInterval(rotateImage, 5000);
+        });
+    </script>
 </body>
 </html>
