@@ -31,29 +31,37 @@ UniPath: Information on my college mentorship platform for high-schoolers.
 /kibelesebnemyildirim.github.io
 ├── css/
 │   ├── style.css                     # Main stylesheet
-├── images/
-│   ├── profile.jpg                   # Profile picture for the About page
-│   ├── banner.jpg                    # Banner image for the landing page
-│   └── [additional images]
-├── js/
-│   ├── script.js                     # JavaScript file for interactive elements
+
+├── html/
 ├── index.html                        # Landing page
 ├── about.html                        # About page
-├── media.html                        # Media page
+├── projects.html                     # Projects page
 ├── unipath.html                      # UniPath section
 ├── LICENSE                           # License file
 ├── README.md                         # This file
-└── [additional files, PDFs, etc.]
+
+├── images/
+│   ├── face0.jpg                   
+│   ├── face.jpg                   
+│   ├── pomsbanner.png                # Banner image for the landing page
+    ├── informs.png     
+│   └── inform.png
+├── js/
+│   ├── script.js                     # JavaScript file for interactive elements
+├── draftpaper.pdf
+├── dronepaper.pdf
+├── wildfire.pdf
+
 
 ```
 ## Setup Instructions
 To run the website locally, follow these steps:
 
 1. **Clone the Repository**
-
    ```bash
-git clone https://github.com/kibelesebnemyildirim/kibelesebnemyildirim.github.io.git
-cd kibelesebnemyildirim.github.io
+   git clone https://github.com/kibelesebnemyildirim/kibelesebnemyildirim.github.io.git
+   cd kibelesebnemyildirim.github.io
+
     ```
 2. **Open the Files**   
     
