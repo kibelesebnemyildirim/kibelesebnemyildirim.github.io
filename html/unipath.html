@@ -12,65 +12,99 @@
         /* Core Styling */
         body {
             font-family: 'Ubuntu', sans-serif;
-            background-color: #f4f8fc;
+            background-color: #f0f8ff;
             color: #333;
         }
 
         /* Navbar Styling */
         .navbar {
-            background-color: #004e99;
+            background: linear-gradient(45deg, #4e54c8, #8f94fb);
             padding: 15px 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .navbar-nav .nav-link:hover {
-            color: #ffdf40;
+            color: #ffe066;
         }
 
-        /* Section Styling */
-        .section {
-            padding: 60px 0;
+        /* UniPath Section Styling */
+        #unipath {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f3ec78, #af4261);
+            color: #fff;
+            text-align: center;
         }
         h1, h3 {
-            color: #004e99;
             font-weight: 700;
+            color: #ffe066;
+        }
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px #333;
+        }
+        p, ul {
+            color: #fff;
         }
 
-        /* UniPath Image Gallery */
-        .image-gallery img {
-            width: 90px;
-            height: auto;
-            margin: 10px;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-        .image-gallery img:hover {
-            transform: scale(1.1);
-        }
-
-        /* List Styling */
+        /* Fun Animated List Items */
         ul {
             list-style: none;
             padding-left: 0;
         }
+        ul li {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            padding: 5px 0;
+            position: relative;
+            transition: transform 0.3s ease;
+            color: #ffe066;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
         ul li::before {
-            content: '✓ ';
-            color: #004e99;
-            font-weight: bold;
+            content: '🌟';
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        ul li:hover {
+            transform: scale(1.05);
+        }
+        ul li:hover::before {
+            transform: rotate(20deg) scale(1.2);
         }
 
         /* Call to Action Button */
         .btn-primary {
-            background-color: #004e99;
+            background-color: #ff9ff3;
             border: none;
             color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            box-shadow: 0 5px 10px rgba(0, 78, 153, 0.2);
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 5px 10px rgba(255, 82, 146, 0.3);
         }
         .btn-primary:hover {
-            background-color: #ffdf40;
-            color: #004e99;
+            background-color: #ffe066;
+            color: #af4261;
+            transform: translateY(-3px);
+        }
+
+        /* Image Gallery Styling */
+        .image-gallery img {
+            width: 100px;
+            height: auto;
+            margin: 15px;
+            transition: transform 0.4s, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .image-gallery img:hover {
+            transform: rotate(5deg) scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -100,22 +134,22 @@
     </nav>
 
     <!-- UniPath Section -->
-    <div id="unipath" class="section text-center">
+    <div id="unipath" class="section">
         <div class="container">
             <h1>UniPath</h1>
-            <p>As the founder of UniPath, I am proud to introduce Turkey's first and only free virtual coach dedicated to guiding students who aspire to study abroad. UniPath is a unique peer-to-peer coaching platform that provides free counseling and support to students on their international education journey.</p>
+            <p>Welcome to UniPath, a vibrant community supporting students aspiring to study abroad. Dive into our engaging resources and join thousands of students in pursuing their dreams!</p>
             
-            <h3>Accessible Resources Offered by UniPath</h3>
+            <h3>Our Exciting Resources:</h3>
             <ul class="text-left mx-auto" style="max-width: 600px;">
-                <li><a href="https://www.instagram.com/unipathapp/" target="_blank">Instagram</a> live sessions with students from top colleges</li>
-                <li><a href="https://www.youtube.com/channel/UCUJBlYvCd3efchpLRzTvOYg" target="_blank">YouTube</a> videos on the college application process</li>
-                <li><a href="https://medium.com/unipath" target="_blank">Medium</a> blog posts with valuable insights</li>
-                <li><a href="https://open.spotify.com/show/76uIbHQdB8EDDU6AJJ77cE?si=5zHQmHeASxSMabkuqPw6Ng" target="_blank">Spotify</a> podcasts featuring expert advice</li>
+                <li><a href="https://www.instagram.com/unipathapp/" target="_blank" style="color: #ffe066;">📸 Instagram live sessions with top college students</a></li>
+                <li><a href="https://www.youtube.com/channel/UCUJBlYvCd3efchpLRzTvOYg" target="_blank" style="color: #ffe066;">🎥 YouTube videos on the application process</a></li>
+                <li><a href="https://medium.com/unipath" target="_blank" style="color: #ffe066;">📝 Medium blog posts with expert advice</a></li>
+                <li><a href="https://open.spotify.com/show/76uIbHQdB8EDDU6AJJ77cE?si=5zHQmHeASxSMabkuqPw6Ng" target="_blank" style="color: #ffe066;">🎧 Spotify podcasts for valuable insights</a></li>
             </ul>
 
             <a href="https://unipathapp.com/" target="_blank" class="btn btn-primary mt-4">Visit UniPath</a>
 
-            <!-- UniPath Image Gallery -->
+            <!-- Image Gallery -->
             <div class="image-gallery mt-4">
                 <a href="https://unipathapp.com/" target="_blank">
                     <img src="/images/unipath2.png" alt="UniPath Image 1" class="gallery-img">
