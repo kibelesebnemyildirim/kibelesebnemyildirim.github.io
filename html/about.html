@@ -17,11 +17,7 @@
         }
 
         /* Navbar Styling */
-        .navbar {
-            background: linear-gradient(to right, rgba(0, 86, 179, 0.9), rgba(0, 123, 255, 0.9));
-            padding: 15px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+   
         .navbar-brand h1 {
             font-size: 1.8rem;
             color: #fff;
@@ -159,9 +155,9 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
                     <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="unipath.html" class="nav-link active">UniPath</a></li>
+                    <li class="nav-item"><a href="unipath.html" class="nav-link">UniPath</a></li>
                     <li class="nav-item"><a href="#connect" class="nav-link">Contact</a></li>
                 </ul>
             </div>
@@ -229,7 +225,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             const images = [
                 "/images/pomsbanner.jpg",
-                "/images/face.JPG",
+                "/images/face.jpg",
                 "/images/poms.jpg",
                 "/images/informs.png"
             ];
@@ -245,5 +241,6 @@
             setInterval(rotateImage, 5000);
         });
     </script>
+    
 </body>
 </html>
