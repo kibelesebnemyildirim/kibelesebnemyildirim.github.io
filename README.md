@@ -1,44 +1,49 @@
 # Personal Website
 
-This repository contains the source code for my personal website, developed to showcase my portfolio, projects, and provide information about my background. The website includes multiple sections such as a landing page, about page, and media page.
+This repository contains the source code for my personal website, created to showcase my portfolio, projects, and professional background. The website includes sections such as a landing page, an about page, and a media page.
 
 ## Table of Contents
 
-1. [Project Overview](#project-overview)
+1. [Overview](#overview)
 2. [Technologies Used](#technologies-used)
 3. [File Structure](#file-structure)
-4. [Setup Instructions](#setup-instructions)
+4. [Getting Started](#getting-started)
 5. [License](#license)
 
-## Project Overview
+## Overview
 
-The personal website is designed to present information about myself, my work, and my projects. It features:
+The website serves as a platform to share my journey, showcase projects, and highlight achievements. It includes:
 
-- A landing page with a hero section
-- An about page detailing my background and skills
-- A media page showcasing various media (images, videos, etc.)
-- Responsive design to ensure compatibility across different devices
+Landing Page: A dynamic introduction with rotating images.
+About Page: An overview of my academic background, skills, and aspirations.
+Media Page: Highlights media appearances, social media embeds, and links to external publications.
+UniPath: Information on my college mentorship platform for high-schoolers.
 
 ## Technologies Used
 
-- **HTML5**: Markup language used to structure the content.
-- **CSS3**: Styling language used for layout and design.
-- **JavaScript**: (Optional) For interactive elements (if included in future updates).
-- **Bootstrap 4**: For responsive design and styling (included via CDN).
+- **HTML5**: Structuring the content
+- **CSS3**: Layout and design
+- **JavaScript**: For interactive features
+- **Bootstrap 4**: Responsive consistent design
 
 ## File Structure
 
-/personal-website
-|-- /css
-| |-- style.css # Main stylesheet
-|-- /images
-| |-- [images for the site]
-|-- /js
-| |-- [JavaScript files, if any]
-|-- index.html # Landing page
-|-- about.html # About page
-|-- projects.html # Projects page
-|-- README.md # This file
+/kibelesebnemyildirim.github.io
+├── css/
+│   ├── style.css                     # Main stylesheet
+├── images/
+│   ├── profile.jpg                   # Profile picture for the About page
+│   ├── banner.jpg                    # Banner image for the landing page
+│   └── [additional images]
+├── js/
+│   ├── script.js                     # JavaScript file for interactive elements
+├── index.html                        # Landing page
+├── about.html                        # About page
+├── media.html                        # Media page
+├── unipath.html                      # UniPath section
+├── LICENSE                           # License file
+├── README.md                         # This file
+└── [additional files, PDFs, etc.]
 
 
 ## Setup Instructions
@@ -47,14 +52,12 @@ To run the website locally, follow these steps:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/kibelesebnemyildirim/personal-website.git
-
-    cd personal-website
+git clone https://github.com/kibelesebnemyildirim/kibelesebnemyildirim.github.io.git
+cd kibelesebnemyildirim.github.io
     ```
 2. **Open the Files**   
     
-        Open the `index.html`, `about.html`, or `projects.html` files in your browser to view the website.
-        
+Open index.html in your preferred web browser.        
 
 
 ## License
