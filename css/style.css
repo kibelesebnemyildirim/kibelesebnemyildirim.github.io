@@ -187,6 +187,9 @@ background-position: center 55%;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+#connect   html {
+    scroll-behavior: smooth;
+}
 
 /* Footer Styles */
 .footer {
