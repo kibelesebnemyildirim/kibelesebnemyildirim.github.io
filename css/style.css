@@ -190,6 +190,27 @@ background-position: center 55%;
 #connect   html {
     scroll-behavior: smooth;
 }
+       /* Footer Styling */
+        #connect {
+            padding: 50px 0;
+            background-color: #004e99;
+            color: #fff;
+            text-align: center;
+        }
+        #connect h1 {
+            font-size: 2.2rem;
+            color: #ffdf40;
+        }
+        #connect p {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+        #connect a {
+            color: #ffdf40;
+        }
+        html {
+    scroll-behavior: smooth;
+}
 
 /* Footer Styles */
 .footer {
