@@ -8,8 +8,63 @@ body, html {
     box-sizing: border-box;
     background: #f0f4f8;
 }
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
-/* Sticky Navbar Styling */
+.spin-animation {
+    animation: spin 0.5s ease;
+}
+
+
+        /* Fun Animated List Items */
+        .navbar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .navbar  ul li {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            padding: 5px 0;
+            position: relative;
+            transition: transform 0.3s ease;
+            color: #fff;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 1px;
+        }
+        .navbar ul li::before {
+            content: '🌟';
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .navbar ul li:hover {
+            transform: scale(1.05);
+        }
+        .navbar  ul li:hover::before {
+            transform: rotate(20deg) scale(1.2);
+        }
+
+.navbar .btn-primary {
+    background-color: #ff9ff3;
+    border: none;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(255, 82, 146, 0.3);
+}
+.navbar .btn-primary:hover {
+    background-color: #4f7df6;
+    color: #af4261;
+    transform: translateY(-3px);
+}
+
+/* Navbar Styling */
 .navbar {
     background: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(0, 86, 179, 0.7)), 
             url('/images/pomsbanner.jpg') no-repeat center center;
@@ -17,58 +72,41 @@ background-size: cover;
 background-position: center 55%; 
     position: sticky;
     top: 0;
-    z-index: 1000;
-    padding: 20px 30px;
-    width: 100%;
-    height: 130px;
-    border-bottom: 2px solid #343a40;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand h1 {
-    color: #ffffff;
+    color: #fff;
     font-family: 'Sansita', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    display: inline;
+    position: relative;
 }
 
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.1);
+.navbar-brand h1::after {
+    content: '✨';
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    font-size: 1.2rem;
+    animation: starMove 1.5s infinite;
 }
 
-.navbar-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-}
-
-.navbar-nav .nav-item {
-    margin: 0 15px;
-}
-
+/* Menu Links Styling */
 .navbar-nav .nav-link {
-    color: #ffffff !important;
-    font-size: 1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    padding: 10px 15px;
+    color: #ffffffb3;
+    font-family: 'Sansita', sans-serif;
+    font-size: 1.1rem;
+    padding: 2px 2px;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
+    transition: color 0.3s, background-color 0.3s;
 }
 
 .navbar-nav .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    color: #ffffff !important;
+    color: #ffe066;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
 }
 
 
