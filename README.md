@@ -44,8 +44,9 @@ UniPath: Information on my college mentorship platform for high-schoolers.
 │   ├── face0.jpg                   
 │   ├── face.jpg                   
 │   ├── pomsbanner.png                # Banner image for the landing page
-    ├── informs.png     
+│   ├── informs.png     
 │   └── inform.png
+
 ├── js/
 │   ├── script.js                     # JavaScript file for interactive elements
 ├── draftpaper.pdf
