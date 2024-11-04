@@ -27,7 +27,7 @@ UniPath: Information on my college mentorship platform for high-schoolers.
 - **Bootstrap 4**: Responsive consistent design
 
 ## File Structure
-
+   ```bash
 /kibelesebnemyildirim.github.io
 ├── css/
 │   ├── style.css                     # Main stylesheet
@@ -45,7 +45,7 @@ UniPath: Information on my college mentorship platform for high-schoolers.
 ├── README.md                         # This file
 └── [additional files, PDFs, etc.]
 
-
+```
 ## Setup Instructions
 To run the website locally, follow these steps:
 
