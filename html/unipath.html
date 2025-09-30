@@ -9,112 +9,141 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <style>
-        /* Core Styling */
         body {
             font-family: 'Ubuntu', sans-serif;
-            background-color: #f0f8ff;
-            color: #fff;
+            background: #f5f7fa;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Navbar Styling */
-        .navbar {
-            background: linear-gradient(45deg, #ff4b8b, #4f7df6);
-            padding: 15px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .navbar-nav .nav-link:hover {
-            color: #ffe066;
-        }
-
-        /* UniPath Section Styling */
+        /* UniPath Section */
         #unipath {
             padding: 80px 0;
-            background: linear-gradient(135deg, #4f7df6, #ff4b8b);
+            background: linear-gradient(135deg, #004e99, #003366);
             color: #fff;
             text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            margin: 40px auto;
         }
-        h1, h3 {
+        #unipath h1 {
+            font-size: 2.8rem;
             font-weight: 700;
-            color: #f0f8ff;
+            color: #ffffff;
         }
-        h1 {
-            font-size: 3rem;
+        #unipath h3 {
+            color: #fff;
+            font-weight: 600;
         }
-        p, ul {
+        #unipath p, #unipath ul {
             color: #f0f8ff;
+            font-size: 1.1rem;
+            line-height: 1.65;
         }
 
-        /* Fun Animated List Items */
-        ul {
+        /* UniPath List */
+        #unipath ul {
             list-style: none;
             padding-left: 0;
-        }
-        ul li {
-            font-size: 1.2rem;
-            margin: 10px 0;
-            padding: 5px 0;
-            position: relative;
-            transition: transform 0.3s ease;
-            color: #fff;
+            max-width: 650px;
+            margin: 30px auto;
             text-align: left;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
-        ul li::before {
-            content: '🌟';
-            font-size: 1.5rem;
-            transition: transform 0.3s;
+        #unipath ul li {
+            margin-bottom: 12px;
+            padding: 8px 12px;
+            border-left: 4px solid #ffffff;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            transition: background 0.3s ease;
         }
-        ul li:hover {
-            transform: scale(1.05);
+        #unipath ul li:hover {
+            background: rgba(255,255,255,0.12);
         }
-        ul li:hover::before {
-            transform: rotate(20deg) scale(1.2);
+        #unipath ul li a {
+            color: #f0f8ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        #unipath ul li a:hover {
+            color: #ffffff;
         }
 
         /* Call to Action Button */
         .btn-primary {
-            background-color: #ff9ff3;
+            background-color: #004e99;
             border: none;
             color: #fff;
             padding: 12px 30px;
-            border-radius: 50px;
-            transition: all 0.3s;
-            font-weight: bold;
+            border-radius: 30px;
+            font-weight: 600;
             text-transform: uppercase;
-            box-shadow: 0 5px 10px rgba(255, 82, 146, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
         }
         .btn-primary:hover {
-            background-color: #4f7df6;
-            color: #af4261;
-            transform: translateY(-3px);
+            background-color: #ffffff;
+            color: #004e99;
+            transform: translateY(-2px);
         }
 
-        /* Image Gallery Styling */
+        /* Image Gallery */
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
         .image-gallery img {
-            width: auto;
-            height: 500px;
-            margin: 15px;
-            transition: transform 0.4s, box-shadow 0.3s ease-in-out;
-            cursor: pointer;
-            border-radius: 10px;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .image-gallery img:hover {
-            transform: rotate(5deg) scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.03);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+        }
+
+        /* Contact Section */
+        #connect {
+            background: #004e99;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        #connect h1 {
+            font-size: 2.2rem;
+            color: #ffffff;
+        }
+        #connect p, #connect a {
+            color: #fff;
+            font-size: 1.05rem;
+        }
+        #connect a:hover {
+            color: #fffefb;
+        }
+        #connect .social-buttons img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        #connect .social-buttons img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-dark navbar-expand-lg sticky-top">
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" href="index.html">
-                <div class="d-flex align-items-center">
-                    <h1 class="mb-0">Kibele Sebnem Yildirim</h1>
-                </div>
+                <h1 class="mb-0">Kibele Sebnem Yildirim</h1>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -134,63 +163,62 @@
     <!-- UniPath Section -->
     <div id="unipath" class="section">
         <div class="container">
-            <h1 style="color: #f0f8ff;">UniPath</h1>
-            <p style="color: #f0f8ff;">
-            Welcome to UniPath, a vibrant community supporting students aspiring to study abroad.
-            Dive into our engaging resources and join thousands of students in pursuing their dreams!
-        </p>
+            <h1>UniPath</h1>
+            <p>
+                Welcome to UniPath, a vibrant community supporting students aspiring to study abroad.
+                Dive into our engaging resources and join thousands of students in pursuing their dreams!
+            </p>
 
-<div style="color: #f0f8ff; padding-top: 10px;">
-    <strong>About UniPath:</strong>
-    <p style="color: #f0f8ff;>
-        UniPath is an initiative that provides resources and guidance to high school students aiming to study abroad, helping them navigate the application process. 
-        In our country, many high school students see education abroad as an unattainable goal, impacting their career planning and limiting the sharing of global knowledge and experiences. 
-        To address this challenge, we are committed to creating an alternative pathway for these students.
-    </p>
-    
-    <strong>Our Vision and Team:</strong>
-    <p style="color: #f0f8ff;>
-        With this vision in mind, we've built a strong team of passionate members. As high school and university students who have faced similar challenges, 
-        the UniPath team brings a unique understanding that sets us apart from traditional university counseling services. Our shared experiences foster a strong synergy 
-        and team spirit, enabling us to work tirelessly toward our mission without losing momentum.
-    </p>
-</div>
+            <div class="text-left mx-auto" style="max-width: 800px; margin-top: 30px;">
+                <h3>About UniPath:</h3>
+                <p>
+                    UniPath is an initiative that provides resources and guidance to high school students aiming to study abroad, helping them navigate the application process. 
+                    In our country, many high school students see education abroad as an unattainable goal, impacting their career planning and limiting the sharing of global knowledge and experiences. 
+                    To address this challenge, we are committed to creating an alternative pathway for these students.
+                </p>
+                <h3>Our Vision and Team:</h3>
+                <p>
+                    With this vision in mind, we've built a strong team of passionate members. As high school and university students who have faced similar challenges, 
+                    the UniPath team brings a unique understanding that sets us apart from traditional university counseling services. Our shared experiences foster a strong synergy 
+                    and team spirit, enabling us to work tirelessly toward our mission without losing momentum.
+                </p>
+            </div>
 
-              <div class="image-gallery mt-4">
+            <!-- Gallery -->
+            <div class="image-gallery mt-4">
                 <a href="https://unipathapp.com/" target="_blank">
                     <img src="/images/unipath2.png" alt="UniPath Image 1" class="gallery-img">
                 </a>
             </div>
-            
-            <ul class="text-left mx-auto" style="max-width: 600px;">
-                <li><a href="https://www.instagram.com/unipathapp/" target="_blank" style="color: #f0f8ff;">📸 Instagram live sessions with top college students</a></li>
-                <li><a href="https://www.youtube.com/channel/UCUJBlYvCd3efchpLRzTvOYg" target="_blank" style="color: #f0f8ff;">🎥 YouTube videos on the application process</a></li>
-                <li><a href="https://medium.com/unipath" target="_blank" style="color: #f0f8ff;">📝 Medium blog posts with expert advice</a></li>
-                <li><a href="https://open.spotify.com/show/76uIbHQdB8EDDU6AJJ77cE?si=5zHQmHeASxSMabkuqPw6Ng" target="_blank" style="color: #f0f8ff;">🎧 Spotify podcasts for valuable insights</a></li>
+
+            <!-- Resources List -->
+            <ul>
+                <li><a href="https://www.instagram.com/unipathapp/" target="_blank">📸 Instagram live sessions with top college students</a></li>
+                <li><a href="https://www.youtube.com/channel/UCUJBlYvCd3efchpLRzTvOYg" target="_blank">🎥 YouTube videos on the application process</a></li>
+                <li><a href="https://medium.com/unipath" target="_blank">📝 Medium blog posts with expert advice</a></li>
+                <li><a href="https://open.spotify.com/show/76uIbHQdB8EDDU6AJJ77cE?si=5zHQmHeASxSMabkuqPw6Ng" target="_blank">🎧 Spotify podcasts for valuable insights</a></li>
             </ul>
 
-            <a href="https://unipathapp.com/" target="_blank" class="btn btn-primary mt-4">Visit UniPath</a>
+            <a href="https://unipathapp.com/" target="_blank" class="btn btn-primary mt-3">Visit UniPath</a>
 
-            <!-- Image Gallery -->
-          
+            <!-- Octopus Gallery -->
             <div class="image-gallery mt-4">
                 <a href="https://unipathapp.com/" target="_blank">
-                    <img src="/images/ahtapot.png" alt="UniPath Image 1" class="gallery-img">
+                    <img src="/images/ahtapot.png" alt="UniPath Octopus 1" class="gallery-img">
                 </a>
                 <a href="https://unipathapp.com/" target="_blank">
-                    <img src="/images/ahtapot0.png" alt="UniPath Image 1" class="gallery-img">
+                    <img src="/images/ahtapot0.png" alt="UniPath Octopus 2" class="gallery-img">
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Contact Section remains the same as other pages -->
+    <!-- Contact -->
     <div id="connect" class="section">
         <div class="container">
             <h1>Contact</h1>
             <p>Feel free to reach out to me at:</p>
-            <p>Email: <a href="mailto:sebnemkibeleyildirim@gmail.com">sebnemkibeleyildirim@gmail.com</a></p>
-            <p>Connect with me on LinkedIn and GitHub:</p>
+            <p>Email: <a href="mailto:kibele.yildirim@mail.mcgill.ca">kibele.yildirim@mail.mcgill.ca</a></p>
             <div class="social-buttons">
                 <a href="https://www.linkedin.com/in/kibele-sebnem-yildirim-71054917b/" target="_blank">
                     <img src="/images/linkediniconn.png" alt="LinkedIn" class="social-icon">
